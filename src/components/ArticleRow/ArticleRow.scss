@@ -1,0 +1,29 @@
+.article-img {
+  width: 60px;
+  transition: all .3s;
+}
+
+.article-img:hover {
+  transform: scale(1.2);
+}
+
+.icon-link {
+  width: 16px;
+  transition: all .3s;
+}
+
+.icon-link:hover {
+  transform: scale(1.2);
+}
+
+.table-link {
+  color: var(--dark-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s;
+
+  &:hover {
+    color: #666;
+    transform: scale(1.2);
+  }
+}

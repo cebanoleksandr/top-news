@@ -1,0 +1,15 @@
+.filter-menu {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  bottom: 0;
+  z-index: 150;
+  padding: 24px;
+  width: 300px;
+  background-color: var(--light-color);
+  transition: all .3s ease-in-out;
+}
+
+.filter-menu.open {
+  right: 0;
+}

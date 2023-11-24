@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: var(--primary-color);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--light-color);
+  font-size: 32px;
+  transition: all .3s;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+}

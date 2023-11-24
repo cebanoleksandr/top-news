@@ -1,0 +1,29 @@
+.articles-header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filteres-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.input-container {
+  max-width: 200px;
+}
+
+.filters-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
