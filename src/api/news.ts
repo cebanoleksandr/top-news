@@ -14,5 +14,10 @@ export const getNews = (
   const categoryParams = !!category && category !== 'general' ? `category=${category}&` : '';
   const queryParams = !!query ? `q=${query}&` : '';
 
-  return axios.get<ResponseServer>(`${BASE_URL}/top-headlines?${countryParams}${categoryParams}${queryParams}page=${page}&apiKey=${API_KEY}`);
+  return axios.get<ResponseServer>(`${BASE_URL}/top-headlines?${countryParams}${categoryParams}${queryParams}page=${page}&apiKey=${API_KEY}`, {
+    withCredentials: true,
+    headers: {
+      "X-Api-Key": "01db197f238e491ba7bdaddae6ea45cc"
+    },
+  });
 }
