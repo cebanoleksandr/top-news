@@ -13,7 +13,7 @@ export const ArticleRow: React.FC<Props> = ({ article }) => {
       <td>
         <Link to={"/" + article.id}>
           <img
-            src={article.urlToImage}
+            src={article.image}
             className="article-img"
             alt=""
           />
@@ -28,7 +28,7 @@ export const ArticleRow: React.FC<Props> = ({ article }) => {
 
       <td>
         <Link to={"/" + article.id} className="table-link">
-          {article.author?.length > 35 ? article.author.slice(0, 35) + '...' : article.author}
+          {article.source.name}
         </Link>
       </td>
 

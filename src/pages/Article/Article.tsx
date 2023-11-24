@@ -19,13 +19,12 @@ export const Article = () => {
       <h1 className="text-center">{article?.title}</h1>
 
       <img
-        src={article?.urlToImage}
+        src={article?.image}
         className="big-img"
         alt=""
       />
 
       <small>{article?.publishedAt.slice(0, 10)} </small>
-      <small> {article?.author}</small>
 
       <p>{article?.description}</p>
     </div>

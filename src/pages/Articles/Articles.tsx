@@ -110,7 +110,7 @@ export const Articles = () => {
 
     getNews(currentCountry, currentCategory, currentQuery, currentPage)
       .then((data) => {
-        const maxPage = Math.ceil(data.data.totalResults / 20);
+        const maxPage = Math.ceil(data.data.totalArticles / 10);
         const currentArticles = data.data.articles.map((a, i) => ({ ...a, id: +new Date() + i }));
 
         setTotalPages(maxPage);
@@ -138,7 +138,7 @@ export const Articles = () => {
               <tr>
                 <th>Image</th>
                 <th>Title</th>
-                <th>Authors</th>
+                <th>Source</th>
                 <th>Description</th>
                 <th>Publication date</th>
                 <th>Original URL</th>

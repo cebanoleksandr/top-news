@@ -1,8 +1,8 @@
 import axios from "axios";
 import { ResponseServer } from "../utils/types";
 
-export const API_KEY = '01db197f238e491ba7bdaddae6ea45cc';
-export const BASE_URL = 'https://newsapi.org/v2';
+export const API_KEY = '269b9942df694f9da4c194e33b19a376';
+export const BASE_URL = 'https://gnews.io/api/v4';
 
 export const getNews = (
   country: string,
@@ -14,10 +14,5 @@ export const getNews = (
   const categoryParams = !!category && category !== 'general' ? `category=${category}&` : '';
   const queryParams = !!query ? `q=${query}&` : '';
 
-  return axios.get<ResponseServer>(`${BASE_URL}/top-headlines?${countryParams}${categoryParams}${queryParams}page=${page}&apiKey=${API_KEY}`, {
-    withCredentials: true,
-    headers: {
-      "X-Api-Key": "01db197f238e491ba7bdaddae6ea45cc"
-    },
-  });
+  return axios.get<ResponseServer>(`${BASE_URL}/top-headlines?${countryParams}${categoryParams}${queryParams}page=${page}&apikey=${API_KEY}`);
 }

@@ -14,7 +14,6 @@ export const Pagination: React.FC<Props> = ({
   currentPage,
   totalPages,
   rest,
-  onChangePageHandler,
 }) => {
   const prevButton = '<';
   const nextButton = '>';
@@ -38,7 +37,6 @@ export const Pagination: React.FC<Props> = ({
             search: `?page=${currentPage - 1}${rest}`
           }}
           className="page-button left"
-          // onClick={() => onChangePageHandler(currentPage - 1)}
         >
           {prevButton}
         </NavLink>
@@ -55,7 +53,6 @@ export const Pagination: React.FC<Props> = ({
             className={classNames('page-button', {
               'is-active': currentPage === 1,
             })}
-            // onClick={() => onChangePageHandler(1)}
           >
             1
           </NavLink>
@@ -73,7 +70,6 @@ export const Pagination: React.FC<Props> = ({
           className={classNames('page-button', {
             'is-active': currentPage === page,
           })}
-          // onClick={() => onChangePageHandler(page)}
         >
           {page}
         </NavLink>
@@ -91,7 +87,6 @@ export const Pagination: React.FC<Props> = ({
             className={classNames('page-button', {
               'is-active': currentPage === totalPages,
             })}
-            // onClick={() => onChangePageHandler(totalPages)}
           >
             {totalPages}
           </NavLink>
@@ -105,7 +100,6 @@ export const Pagination: React.FC<Props> = ({
             search: `?page=${currentPage + 1}${rest}`
           }}
           className="page-button right"
-          // onClick={() => onChangePageHandler(currentPage + 1)}
         >
           {nextButton}
         </NavLink>
